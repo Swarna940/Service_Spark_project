@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Spark - Login</title>
+  <link rel="stylesheet" href="Login.css" />
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Service Spark Login</h1>
+    <form onsubmit="handleLogin(event)">
+      <input type="text" id="username" placeholder="Enter your username" required>
+      <input type="password" id="password" placeholder="Enter your password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="links">
+      <a href="#" onclick="navigateTo('forgotPassword')">Forgot Password?</a>
+      <br>
+      Not a member? <a href="#" onclick="navigateTo('signup')">Sign Up</a>
+    </div>
+  </div>
+
+  <script>
+    // Handle login form submission
+    function handleLogin(event) {
+      event.preventDefault(); // Prevent form submission
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username && password) {
+        // Simulate login and redirect
+        alert(`Welcome, ${username}!`);
+        window.location.href = "HomePage.html"; // Replace with your dashboard page URL
+      } else {
+        alert("Please enter valid credentials.");
+      }
+    }
+
+    // Navigate to other pages
+    function navigateTo(page) {
+      if (page === 'forgotPassword') {
+        window.location.href = "forgot_password.html"; // Replace with your Forgot Password page URL
+      } else if (page === 'signup') {
+        window.location.href = "signup.html"; // Replace with your Sign Up page URL
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Spark - User Profile</title>
+    <link rel="stylesheet" href="Profile.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>User Profile</h1>
+      <nav>
+        <a href="HomePage.html">Home</a>
+        <a href="Service.html">Services</a>
+        <a href="Profile.html">Profile</a>
+        <!-- <a href="admin.html">Admin</a> -->
+      </nav>
+    </header>
+
+    <section class="profile-section">
+      <div class="profile-card">
+        <div class="profile-image">
+          <img src="personImage1.png" alt="User Avatar" />
+        </div>
+        <div class="profile-info">
+          <h2>Radhika Singh</h2>
+          <p>Email: <span>radhikasingh@gmail.com</span></p>
+          <p>Phone: <span>9752044777</span></p>
+          <p>Address: <span>Indore, MP</span></p>
+        </div>
+      </div>
+
+      <div class="update-form">
+        <h3>Update Your Profile</h3>
+        <form id="profileForm">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" value="Radhika Singh" required />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value="radhikasingh@gmail.com"
+            required
+          />
+
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" value=" 9752044777" required />
+
+          <label for="address">Address:</label>
+          <textarea id="address" rows="3" required>
+Indore, MP</textarea
+          >
+
+          <button type="submit">Update Profile</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Service Spark. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
